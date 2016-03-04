@@ -1,4 +1,17 @@
-﻿// MENU SCENE
+﻿/*
+ *******************************************************************************
+ * Source file name : menu.ts                                                  *
+ * Author's name : Duc Minh Tran (300771859)                                   *
+ * Last Modified by : Duc Minh Tran (300771859)                                *
+ * Last Modified date : March 2016                                             *
+ * Program description : This web game, by using create js, is kind of         *
+ *                     simulation of a dice roller. User can click spin button *
+ * and receive different dices everytime                                       *
+ * Revision History : 1                                                        *
+ *******************************************************************************
+*/
+
+// MENU SCENE
 module scenes {
     export class Menu extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
