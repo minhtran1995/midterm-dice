@@ -91,6 +91,8 @@ module scenes {
 
             this._firstWindow.image = assets.getResult("" + rand1);
             this._secondWindow.image = assets.getResult("" + rand2);
+            
+            createjs.Sound.play("ping");
         }
     }
 }

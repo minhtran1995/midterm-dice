@@ -52,6 +52,7 @@ var scenes;
             this._rand2Lbl.text = "" + rand2;
             this._firstWindow.image = assets.getResult("" + rand1);
             this._secondWindow.image = assets.getResult("" + rand2);
+            createjs.Sound.play("ping");
         };
         return Play;
     })(objects.Scene);
