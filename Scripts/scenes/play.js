@@ -15,6 +15,8 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         Play.prototype.start = function () {
+            this._setupBackground("whiteBG");
+            this._fadeIn(500);
             //Add rand Label
             this._rand1Lbl = new objects.Label(" ", "20px Arial", "#000000", config.Screen.CENTER_X - 75, config.Screen.CENTER_Y);
             this.addChild(this._rand1Lbl);

@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: darkgray;
+    background-color: black;
 }
 
 canvas {
@@ -7,7 +7,7 @@ canvas {
     border-radius: 10px;
     text-align: center;
     margin-left: 10%;
-    background-color: white;
+    background-color: #f8f8f8;
 }
 
 .game {

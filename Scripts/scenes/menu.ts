@@ -14,6 +14,9 @@ module scenes {
         
         // Start Method
         public start(): void {
+            this._setupBackground("whiteBG");
+            this._fadeIn(500);
+            
             //Add Menu Label
             this._menuLabel = new objects.Label(
                 "MENU SCENE", "60px Consolas",
@@ -47,10 +50,12 @@ module scenes {
         
         // LEFT_CAVE Button click event handler
         private _startButtonClick(event: createjs.MouseEvent) {
-            // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.PLAY;
-            changeScene();
-        }
+            this._fadeOut(500, () => {
+                // Switch to the mainGame Scene
+                scene = config.Scene.PLAY;
+                changeScene();
+            });
 
+        }
     }
 }

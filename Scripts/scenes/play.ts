@@ -20,26 +20,28 @@ module scenes {
         // Start Method
         public start(): void {
 
+            this._setupBackground("whiteBG");
+            this._fadeIn(500);
 
             //Add rand Label
             this._rand1Lbl = new objects.Label(
                 " ", "20px Arial",
                 "#000000",
-                config.Screen.CENTER_X-75, config.Screen.CENTER_Y);
+                config.Screen.CENTER_X - 75, config.Screen.CENTER_Y);
             this.addChild(this._rand1Lbl);
             
             //Add rand Label
             this._rand2Lbl = new objects.Label(
                 " ", "20px Arial",
                 "#000000",
-                config.Screen.CENTER_X+65, config.Screen.CENTER_Y);
+                config.Screen.CENTER_X + 65, config.Screen.CENTER_Y);
             this.addChild(this._rand2Lbl);
 
 
             // add the Start button to the MENU scene
             this._rollButton = new objects.Button(
                 "RollButton",
-                config.Screen.CENTER_X+30,
+                config.Screen.CENTER_X + 30,
                 config.Screen.CENTER_Y + 100);
             this.addChild(this._rollButton);
 
@@ -57,7 +59,7 @@ module scenes {
             
             //second window
             this._secondWindow = new createjs.Bitmap(assets.getResult("Blank"));
-            this._secondWindow.x = config.Screen.CENTER_X+20 ;
+            this._secondWindow.x = config.Screen.CENTER_X + 20;
             this._secondWindow.y = 100;
             this.addChild(this._secondWindow);
             
@@ -85,13 +87,13 @@ module scenes {
 
             console.log(rand1);
             console.log(rand2);
-            
-            this._rand1Lbl.text = ""+rand1;
-            this._rand2Lbl.text = ""+rand2;
+
+            this._rand1Lbl.text = "" + rand1;
+            this._rand2Lbl.text = "" + rand2;
 
             this._firstWindow.image = assets.getResult("" + rand1);
             this._secondWindow.image = assets.getResult("" + rand2);
-            
+
             createjs.Sound.play("ping");
         }
     }
